@@ -1,1 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Hentaigana:wght@200..900&family=Zen+Antique+Soft&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-museo: "MuseoModerno", sans-serif;
+    --color-pink-100: #F7F6F2;
+    --color-pink-300: #F6D7E7;
+    --color-pink-500: #ED4098;
+}

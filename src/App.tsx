@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import './index.css';
+import HomePage from './pages/HomePage';
+import PlaylistPage from './pages/PlaylistPage';
+import Layout from './components/Layout';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="container">
-      <h1>Electron + Vite + React + TS</h1>
-      <button onClick={() => setCount((count) => count + 1)}>
-        Count: {count}
-      </button>
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path='playlist/:id' element={<PlaylistPage />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   );
 }
 
